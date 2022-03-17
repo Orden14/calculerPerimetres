@@ -54,17 +54,17 @@ Class Carre extends Forme
     function __construct($forme, $perimetre, $coteCarre)
     {
       parent::__construct($forme, $perimetre);
-      $this->setcoteCarre($coteCarre);
+      $this->setCoteCarre($coteCarre);
     }
 
     // getters
-    public function getcoteCarre()
+    public function getCoteCarre()
     {
         return $this->_coteCarre;
     }
 
     // setters
-    public function setcoteCarre($coteCarre)
+    public function setCoteCarre($coteCarre)
     {
         $this->_coteCarre = $coteCarre;
     }
@@ -73,9 +73,9 @@ Class Carre extends Forme
     // fonctions
     public function calculerPerimetreCarre($unCarre)
     {
-        $perimetreCarre = $unCarre->getcoteCarre() * 4;
+        $perimetreCarre = $unCarre->getCoteCarre() * 4;
         $unCarre->setPerimetre($perimetreCarre);
-        echo '<br> Le perimetre du carré de coté '.$unCarre->getcoteCarre().' est de '.$unCarre->getPerimetre();
+        echo '<br> Le perimetre du carré de coté '.$unCarre->getCoteCarre().' est de '.$unCarre->getPerimetre();
     }
 }
 
@@ -89,26 +89,26 @@ Class Rectangle extends Forme
     function __construct($forme, $perimetre, $largeurRectangle, $longueurRectangle)
     {
       parent::__construct($forme, $perimetre); 
-      $this->setlargeurRectangle($largeurRectangle);
-      $this->setlongueurRectangle($longueurRectangle); 
+      $this->setLargeurRectangle($largeurRectangle);
+      $this->setLongueurRectangle($longueurRectangle); 
     }
 
     // getters
-    public function getlargeurRectangle()
+    public function getLargeurRectangle()
     {
         return $this->_largeurRectangle;
     }
-    public function getlongueurRectangle()
+    public function getLongueurRectangle()
     {
         return $this->_longueurRectangle;
     }
 
     // setters
-    public function setlargeurRectangle($largeurRectangle)
+    public function setLargeurRectangle($largeurRectangle)
     {
         $this->_largeurRectangle = $largeurRectangle;
     }
-    public function setlongueurRectangle($longueurRectangle)
+    public function setLongueurRectangle($longueurRectangle)
     {
         $this->_longueurRectangle = $longueurRectangle;
     }
@@ -116,9 +116,9 @@ Class Rectangle extends Forme
     // fonctions
     public function calculerPerimetreRectangle($unRectangle)
     {
-        $perimetreRectangle = $unRectangle->getlongueurRectangle() * 2 + $unRectangle->getlargeurRectangle() * 2;
+        $perimetreRectangle = $unRectangle->getLongueurRectangle() * 2 + $unRectangle->getLargeurRectangle() * 2;
         $unRectangle->setPerimetre($perimetreRectangle);
-        echo '<br>Le perimetre du rectangle de largeur '. $unRectangle->getlargeurRectangle() . ' et de longueur ' . $unRectangle->getlongueurRectangle() . ' est de ' . $unRectangle->getPerimetre();
+        echo '<br>Le perimetre du rectangle de largeur '. $unRectangle->getLargeurRectangle() . ' et de longueur ' . $unRectangle->getLongueurRectangle() . ' est de ' . $unRectangle->getPerimetre();
     }
 }
 
@@ -133,35 +133,35 @@ Class Triangle extends Forme
     function __construct($forme, $perimetre, $coteTriangleUn, $coteTriangleDeux, $coteTriangleTrois)
     {
       parent::__construct($forme, $perimetre);
-      $this->setcoteTriangleUn($coteTriangleUn);
-      $this->setcoteTriangleDeux($coteTriangleDeux);
-      $this->setcoteTriangleTrois($coteTriangleTrois);
+      $this->setCoteTriangleun($coteTriangleUn);
+      $this->setCoteTriangledeux($coteTriangleDeux);
+      $this->setCoteTriangleTrois($coteTriangleTrois);
     }
 
     // getters
-    public function getcoteTriangleUn()
+    public function getCoteTriangleUn()
     {
         return $this->_coteTriangleUn;
     }
-    public function getcoteTriangleDeux()
+    public function getCoteTriangleDeux()
     {
         return $this->_coteTriangleDeux;
     }
-    public function getcoteTriangleTrois()
+    public function getCoteTriangleTrois()
     {
         return $this->_coteTriangleTrois;
     }
 
     // setters
-    public function setcoteTriangleUn($coteTriangleUn)
+    public function setCoteTriangleun($coteTriangleUn)
     {
         $this->_coteTriangleUn = $coteTriangleUn;
     }
-    public function setcoteTriangleDeux($coteTriangleDeux)
+    public function setCoteTriangledeux($coteTriangleDeux)
     {
         $this->_coteTriangleDeux = $coteTriangleDeux;
     }
-    public function setcoteTriangleTrois($coteTriangleTrois)
+    public function setCoteTriangleTrois($coteTriangleTrois)
     {
         $this->_coteTriangleTrois = $coteTriangleTrois;
     }
@@ -169,9 +169,9 @@ Class Triangle extends Forme
     // fonctions
     public function calculerPerimetreTriangle($unTriangle)
     {
-        $perimetreTriangle = $unTriangle->getcoteTriangleUn() + $unTriangle->getcoteTriangleDeux() + $unTriangle->getcoteTriangleTrois();
+        $perimetreTriangle = $unTriangle->getCoteTriangleUn() + $unTriangle->getCoteTriangleDeux() + $unTriangle->getCoteTriangleTrois();
         $unTriangle->setPerimetre($perimetreTriangle);
-        echo '<br>Le perimetre du triangle de cotés '. $unTriangle->getcoteTriangleUn() . ' , ' . $unTriangle->getcoteTriangleDeux() . ' , ' . $unTriangle->getcoteTriangleTrois() . ' est de ' . $unTriangle->getPerimetre();
+        echo '<br>Le perimetre du triangle de cotés '. $unTriangle->getCoteTriangleUn() . ' , ' . $unTriangle->getCoteTriangleDeux() . ' , ' . $unTriangle->getCoteTriangleTrois() . ' est de ' . $unTriangle->getPerimetre();
     }
 }
 
@@ -185,17 +185,17 @@ Class cercle extends Forme
     function __construct($forme, $perimetre, $rayonCercle)
     {
       parent::__construct($forme, $perimetre); 
-      $this->setrayonCercle($rayonCercle);
+      $this->setRayonCercle($rayonCercle);
     }
 
     // getters
-    public function getrayonCercle()
+    public function getRayonCercle()
     {
         return $this->_rayonCercle;
     }
 
     // setters
-    public function setrayonCercle($rayonCercle)
+    public function setRayonCercle($rayonCercle)
     {
         $this->_rayonCercle = $rayonCercle;
     }
@@ -203,9 +203,9 @@ Class cercle extends Forme
     // fonctions
     public function calculerPerimetreCercle($unCercle)
     {
-        $perimetreCercle = 2 * 3.14 * $unCercle->getrayonCercle();
+        $perimetreCercle = 2 * 3.14 * $unCercle->getRayonCercle();
         $unCercle->setPerimetre($perimetreCercle);
-        echo '<br>Le perimetre du cercle de rayon ' . $unCercle->getrayonCercle() . ' est de ' . $unCercle->getPerimetre();
+        echo '<br>Le perimetre du cercle de rayon ' . $unCercle->getRayonCercle() . ' est de ' . $unCercle->getPerimetre();
     }
 }
 

@@ -38,7 +38,7 @@ switch($formeChoisie)
         $_SESSION['forme'] = $formeChoisie;
         break;
     default:
-        echo 'erreur';
+        echo 'Erreur : Veuillez passer par les formulaires<br><a href="index.php">Retour au début</a>';
 }
 ?>
 <button type="submit" value="envoyer">Choisir</button>
