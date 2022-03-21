@@ -2,7 +2,7 @@
 
 <?php
 session_start();
-jhqhjshk
+
 $formeChoisie = $_POST["Forme"];
 
 switch($formeChoisie)
